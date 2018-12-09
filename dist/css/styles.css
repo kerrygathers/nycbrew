@@ -1,0 +1,72 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.calcite-nav-top .calcite-map .leaflet-control-zoom {
+    margin-top: 28px;
+}
+
+.calcite-navbar-search {
+    margin-top: 0;
+    margin-right: 5px;
+    padding: 5px 0;
+}
+
+.calcite-nav-top .panel-body .geocoder-control-suggestions.leaflet-bar {
+    top: 25px;
+    bottom: auto;
+}
+
+.calcite-maps .esri-truncated-attribution {
+    display: none;
+}
+
+.leaflet-touch .leaflet-bar {
+    border: none;
+}
+
+.leaflet-bar {
+    border-style: none !important;
+}
+
+.leaflet-bar a {
+    background-color: #333;
+    color: #f7f4ea;
+}
+
+.leaflet-bar a:hover {
+    background-color: #333;
+}
+
+.leaflet-control-zoom-in {
+    margin-bottom: 3px;
+    border-style: none !important;
+}
+
+.leaflet-control-zoom-out {
+    border-style: none !important;
+}
+
+.home-button {
+    position: absolute;
+    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    right: 25px;
+    bottom: 88px;
+    width: 30px;
+    height: 30px;
+}
+
+.home-button:hover {
+    background-color: #333;
+    color: #000;
+    cursor: pointer;
+}
+
+.home-icon {
+    margin: 7px 0 0 7px;
+}
