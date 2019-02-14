@@ -9,7 +9,7 @@
     <meta name="description" content="Calcite Maps Demo - Esri-Leaflet">
     <meta name="author" content="">
     <!--<link rel="icon" href="https://www.esri.com/favicon.ico">-->
-    <title>NYCBrew (Calcite Test)</title>
+    <title>NYCBrew</title>
 
     <link rel="stylesheet" href="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.1.0/css/calcite-web.min.css">
     <script src="https://s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.1.0/js/calcite-web.min.js"></script>
@@ -26,11 +26,11 @@
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
 
     <!-- Load Esri Leaflet from CDN -->
-    <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet/2.2.3/esri-leaflet.js"></script>
 
     <!-- Load Esri Leaflet Geocoder from CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.3/dist/esri-leaflet-geocoder.css">
-    <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet-geocoder/2.2.13/esri-leaflet-geocoder.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/esri-leaflet-geocoder/2.2.13/esri-leaflet-geocoder.js"></script>
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="dist/css/styles.css">
@@ -90,12 +90,11 @@
             <ul class="dropdown-menu calcite-bgcolor-black">
                 <li><a role="menuitem" tabindex="0" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
                 <li><a class="visible-xs" role="button" data-target="#panelSearch" aria-haspopup="true"><span class="glyphicon glyphicon-search"></span> Search</a></li>
-                <li><a role="menuitem" tabindex="0" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
             </ul>
         </div>
         <!-- Title -->
         <div class="calcite-title calcite-overflow-hidden">
-            <span class="calcite-title-main">NYCbrew</span>
+            <span class="calcite-title-main"><img src="./images/nycbg-logo.png" alt="NYCBG Logo" height="42" width="42">&nbsp;&nbsp;NYCbrew</span>
             <span class="calcite-title-divider hidden-xs"></span>
             <span class="calcite-title-sub hidden-xs">Member Breweries in the NYC Brewers Guild</span>
         </div>
@@ -123,7 +122,7 @@
 
     <!-- Panel -->
 
-    <div class="calcite-panels calcite-panels-left calcite-bg-custom calcite-text-light panel-group calcite-bgcolor-green" role="tablist" aria-multiselectable="true">
+    <div class="calcite-panels calcite-panels-left calcite-bg-dark calcite-text-light" role="tablist" aria-multiselectable="true">
 
         <!-- Info Panel -->
 
@@ -136,17 +135,7 @@
             </div>
             <div id="collapseInfo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingInfo">
                 <div class="panel-body">
-                    <p>The main styles used in this app are:</p>
-                    Body
-                    <li>calcite-nav-bottom</li>
-                    <li>calcite-layout-large-title</li>
-                    <br> Nav
-                    <li>calcite-bgcolor-dark-green</li>
-                    <li>calcite-text-light</li>
-                    <br> Panels
-                    <li>calcite-panels-left</li>
-                    <li>calcite-bgcolor-dark-green</li>
-                    <li>calcite-bg-custom</li>
+                    <p>This map will feature all member breweries in the New York City Brewers Guild.</p>
                 </div>
             </div>
         </div>

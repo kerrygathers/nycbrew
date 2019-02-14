@@ -70,3 +70,7 @@ body {
 .home-icon {
     margin: 7px 0 0 7px;
 }
+
+div.calcite-dropdown-toggle.open {
+    color: #000
+}
