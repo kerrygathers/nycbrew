@@ -74,7 +74,7 @@
 
     <!-- Navbar -->
 
-    <nav class="navbar calcite-navbar navbar-fixed-top calcite-bg-dark calcite-text-light calcite-bgcolor-black">
+    <nav class="navbar calcite-navbar navbar-fixed-top calcite-text-light calcite-bgcolor-black">
         <!-- Menu -->
         <div class="dropdown calcite-dropdown calcite-bg-custom calcite-text-light" role="presentation">
             <a class="dropdown-toggle" role="menubutton" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -95,7 +95,7 @@
         <div class="calcite-title calcite-overflow-hidden">
             <span class="calcite-title-main"><img src="./images/logos/nycbg-logo.png" alt="NYCBG Logo" height="42" width="42">&nbsp;&nbsp;NYCbrew</span>
             <span class="calcite-title-divider hidden-xs"></span>
-            <span class="calcite-title-sub hidden-xs">Taprooms by Breweries in the NYC Brewers Guild</span>
+            <span class="calcite-title-sub hidden-xs">Taprooms by Members of the <strong>NYC Brewers Guild</strong> </span>
         </div>
         <!-- Nav -->
         <ul class="calcite-nav nav navbar-nav">
@@ -127,7 +127,7 @@
 
         <div id="panelInfo" class="panel collapse">
             <div id="headingInfo" class="panel-heading" role="tab">
-                <div class="panel-title">
+                <div class="panel-title calcite-bgcolor-black">
                     <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="panel-label">Info</span></a>
                     <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelInfo"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
                 </div>
@@ -156,7 +156,50 @@
         </div>
 
     </div>
-    <!-- /.calcite-panels -->
+
+    <!-- Brewery Panel -->
+
+    <div id="brewery-info" class="panel panel-white">
+        <span id='info-close'>&times;</span>
+        <p class='brewery-logo'><span></span></p>
+        <h4 class='brewery-name'><span></span></h4>
+        <h5 class='brewery-location'><span></span>, <span></span></h5>
+        <h5 class='brewery-links'><span></span>&nbsp;&nbsp;<span></span></h5>
+        <h5>Taproom Hours</h5>
+        <table class="table hours-table modifier-class table-no-table">
+            <tbody>
+                <tr>
+                    <td class="day-col">SUN</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">MON</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">TUE</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">WED</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">THU</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">FRI</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+                <tr>
+                    <td class="day-col">SAT</td>
+                    <td class="hour-col"><span></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 
 
 
@@ -164,6 +207,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all plugins or individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 
     <script src="dist/js/jquery/calcitemaps-v0.9.js"></script>
     <script src="dist/js/app.js"></script>

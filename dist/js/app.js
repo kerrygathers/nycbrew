@@ -4,9 +4,12 @@
     // Esri-Leaflet 
     // ============
 
+    // hide info panel on page load
+    var info = $('#brewery-info').hide();
+
     var options = {
-        center: [40.723, -74.00],
-        zoom: 10.5,
+        center: [40.752, -74.00],
+        zoom: 10.8,
         zoomSnap: .1,
         zoomControl: false
     }
@@ -39,7 +42,7 @@
     var homeZoom = document.getElementById('homeZoom');
 
     homeZoom.onclick = function () {
-        map.setView([40.723, -74.00], 10.4);
+        map.setView([40.752, -74.00], 10.8);
     }
 
     searchControl.on('results', function (data) {
@@ -51,6 +54,96 @@
             map.setView(data.results[0].latlng)
         }
     })
+
+
+    // load brewery data form csv
+    omnivore.csv('data/breweries.csv')
+        .on('ready', function (e) {
+            drawMap(e.target.toGeoJSON());
+        })
+        .on('error', function (e) {
+            console.log(e.error[0].message);
+        });
+
+    function drawMap(data) {
+
+        var options = {
+            pointToLayer: function (feature, ll) {
+                return L.circleMarker(ll, {
+                    opacity: 1,
+                    weight: 2,
+                    fillOpacity: 0,
+                })
+            }
+        }
+
+        // create separate layers from GeoJSON data
+        var breweryLayer = L.geoJson(data, {
+            filter: function (feature) {
+                if (feature.properties.taproom == "y") {
+                    return feature;
+                }
+            },
+            pointToLayer: function (feature, latlng) {
+                var beerIcon = new L.icon({
+                    iconUrl: "./images/svg/beer-15.svg",
+                    iconSize: [20, 20],
+                    popupAnchor: [-22, -22],
+                    className: "icon"
+                });
+                return L.marker(latlng, {
+                    icon: beerIcon
+                });
+            }
+        }).addTo(map);
+
+        breweryLayer.eachLayer(function (layer) {
+
+            var props = layer.feature.properties;
+
+            var tooltip = "<span class='tooltip-title'>" + props.name + "</span>" +
+                "<p class='tooltip-body'>" + props.neighborhood + ", " + props.boro + "</p>" +
+                "<p class='click-call'>" + "Click for more info" + "</p>"
+
+            layer.bindTooltip(tooltip);
+        });
+
+        retrieveInfo(breweryLayer);
+
+    }
+
+    function retrieveInfo(breweryLayer) {
+
+        breweryLayer.on('click', function (e) {
+
+            var props = e.layer.feature.properties;
+
+            // var logo = e.layer.feature.properties.image;
+
+            // document.getElementById('brewery-logo').src = logo;
+
+            // make info window visible
+            $('#brewery-info').show();
+
+            // populate HTML elements with relevant info
+            $(".brewery-logo span:first-child").html(props.logo);
+
+            $(".brewery-name span:first-child").html(props.name);
+
+            $(".brewery-location span:first-child").html(props.neighborhood);
+
+            $(".brewery-location span:last-child").html(props.boro);
+
+            $(".brewery-links span:first-child").html(props.website);
+
+            $(".brewery-links span:last-child").html(props.beers);
+
+
+            console.log(props.logo)
+
+        });
+
+    }
 
     $(document).ready(function () {
 
