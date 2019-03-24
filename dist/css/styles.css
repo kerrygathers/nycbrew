@@ -5,6 +5,20 @@ body {
     height: 100%;
 }
 
+a {
+    color: #66952E;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #66952E;
+}
+
+a:hover {
+    color: #004400;
+    text-decoration: none;
+}
+
 .calcite-nav-top .calcite-map .leaflet-control-zoom {
     margin-top: 28px;
 }
@@ -48,6 +62,10 @@ body {
 
 .leaflet-control-zoom-out {
     border-style: none !important;
+}
+
+.icon:hover {
+    opacity: .7;
 }
 
 .home-button {
@@ -104,26 +122,56 @@ div.calcite-dropdown-toggle.open {
     left: 14px;
     bottom: 14px;
     margin-bottom: 0;
-    width: 350px;
+    box-shadow: 2px 2px 10px #505050;
 }
 
 .brewery-name {
     font-weight: bold;
     font-size: 24px;
+    margin-right: 16px;
+}
+
+.brewery-logo {}
+
+.logo-pic {
+    height: 120px;
+    text-align: center;
+    margin: 10px 14px 0 0;
+    display: block;
 }
 
 .hours-table {
-    width: 100px;
+    width: 122px;
 }
 
-table.table-no-table td,
-table.table-no-table th {
-    padding: 50px;
-    margin: 0;
+.hours-table-title {
+    margin-top: 16px;
+    margin-bottom: 5px;
+}
+
+.hour-col {
+    text-align: right;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    padding: 3px 0;
 }
 
 #info-close {
     padding: 0;
-    margin: -3px 3px -12px 0;
+    margin: -6px -2px -12px 0;
     float: right;
+    font-weight: bolder;
+    color: #909090;
+}
+
+#info-close:hover {
+    cursor: pointer;
+    font-weight: 600;
+    color: #000;
 }

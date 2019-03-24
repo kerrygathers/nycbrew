@@ -108,6 +108,10 @@
             layer.bindTooltip(tooltip);
         });
 
+        $('#info-close').click(function () {
+            $('#brewery-info').hide();
+        });
+
         retrieveInfo(breweryLayer);
 
     }
@@ -118,28 +122,24 @@
 
             var props = e.layer.feature.properties;
 
-            // var logo = e.layer.feature.properties.image;
-
-            // document.getElementById('brewery-logo').src = logo;
-
             // make info window visible
-            $('#brewery-info').show();
+            $('#brewery-info').fadeIn(150);
 
             // populate HTML elements with relevant info
-            $(".brewery-logo span:first-child").html(props.logo);
-
+            $(".brewery-logo span:first-child").html(
+                "<img src='" + props.logo + "' class='logo-pic'>");
             $(".brewery-name span:first-child").html(props.name);
-
             $(".brewery-location span:first-child").html(props.neighborhood);
-
             $(".brewery-location span:last-child").html(props.boro);
-
             $(".brewery-links span:first-child").html(props.website);
-
             $(".brewery-links span:last-child").html(props.beers);
-
-
-            console.log(props.logo)
+            $(".sunday span:first-child").html(props.sun);
+            $(".monday span:first-child").html(props.mon);
+            $(".tuesday span:first-child").html(props.tue);
+            $(".wednesday span:first-child").html(props.wed);
+            $(".thursday span:first-child").html(props.thu);
+            $(".friday span:first-child").html(props.fri);
+            $(".saturday span:first-child").html(props.sat);
 
         });
 

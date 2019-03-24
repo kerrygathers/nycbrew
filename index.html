@@ -35,39 +35,6 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="dist/css/styles.css">
 
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        .calcite-nav-top .calcite-map .leaflet-control-zoom {
-            margin-top: 28px;
-        }
-
-        .calcite-navbar-search {
-            margin-top: 0;
-            margin-right: 5px;
-            padding: 5px 0;
-        }
-
-        .calcite-nav-top .panel-body .geocoder-control-suggestions.leaflet-bar {
-            top: 25px;
-            bottom: auto;
-        }
-
-        .calcite-maps .esri-truncated-attribution {
-            max-width: 100%;
-            width: 100%;
-        }
-
-        .leaflet-touch .leaflet-bar {
-            border: none;
-        }
-    </style>
-
 </head>
 
 <body class="calcite-maps calcite-nav-top calcite-layout-small-title">
@@ -87,13 +54,13 @@
                 </div>
             </a>
             <ul class="dropdown-menu calcite-bgcolor-black">
-                <li><a role="menuitem" tabindex="0" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
+                <li><a role="menuitem" tabindex="0" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> About the NYCBG</a></li>
                 <li><a class="visible-xs" role="button" data-target="#panelSearch" aria-haspopup="true"><span class="glyphicon glyphicon-search"></span> Search</a></li>
             </ul>
         </div>
         <!-- Title -->
         <div class="calcite-title calcite-overflow-hidden">
-            <span class="calcite-title-main"><img src="./images/logos/nycbg-logo.png" alt="NYCBG Logo" height="42" width="42">&nbsp;&nbsp;NYCbrew</span>
+            <span class="calcite-title-main"><a href="https://www.nycbrewed.com/" target="_blank"><img src="./images/logos/nycbg-logo.png" alt="NYCBG Logo" height="42" width="42"></a>&nbsp;&nbsp;NYCbrew</span>
             <span class="calcite-title-divider hidden-xs"></span>
             <span class="calcite-title-sub hidden-xs">Taprooms by Members of the <strong>NYC Brewers Guild</strong> </span>
         </div>
@@ -128,13 +95,14 @@
         <div id="panelInfo" class="panel collapse">
             <div id="headingInfo" class="panel-heading" role="tab">
                 <div class="panel-title calcite-bgcolor-black">
-                    <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="panel-label">Info</span></a>
+                    <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseInfo" aria-expanded="true" aria-controls="collapseInfo"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="panel-label">About the NYCBG</span></a>
                     <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelInfo"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>
                 </div>
             </div>
             <div id="collapseInfo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingInfo">
                 <div class="panel-body">
-                    <p>This map will feature all member breweries in the New York City Brewers Guild.</p>
+                    <p><i>From <a href="https://www.nycbrewed.com/about" target="_blank">nycbrewed.com:</a></i></p>
+                    <p>The mission of the New York City Brewers Guild is to advocate for and promote awareness of its local brewing members; to increase the visibility of local beers through marketing, events, and consumer education; and to foster a healthy, ethical, and growth-focused craft beer industry throughout the city. A 501[c]6 nonprofit business association, the NYCBG was founded to advance New York City’s brewing industry and thereby lessen human misery.</p>
                 </div>
             </div>
         </div>
@@ -164,37 +132,37 @@
         <p class='brewery-logo'><span></span></p>
         <h4 class='brewery-name'><span></span></h4>
         <h5 class='brewery-location'><span></span>, <span></span></h5>
-        <h5 class='brewery-links'><span></span>&nbsp;&nbsp;<span></span></h5>
-        <h5>Taproom Hours</h5>
-        <table class="table hours-table modifier-class table-no-table">
+        <h5 class='brewery-links'><span></span>&nbsp;&nbsp;&nbsp;<span></span></h5>
+        <h5 class='hours-table-title'>Taproom Hours</h5>
+        <table class="table hours-table table-no-table">
             <tbody>
                 <tr>
                     <td class="day-col">SUN</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col sunday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">MON</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col monday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">TUE</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col tuesday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">WED</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col wednesday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">THU</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col thursday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">FRI</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col friday"><span></span></td>
                 </tr>
                 <tr>
                     <td class="day-col">SAT</td>
-                    <td class="hour-col"><span></span></td>
+                    <td class="hour-col saturday"><span></span></td>
                 </tr>
             </tbody>
         </table>
